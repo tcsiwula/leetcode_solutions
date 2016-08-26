@@ -12,18 +12,24 @@ public class Solution
 
     public static int canWinNim(int a, int b)
     {
-        int sum = 0;
 
         while (b != 0)
         {
             int carry = (a & b) ;
 
-            sum = a ^ b;
+            a = a ^ b;
 
             b = carry << 1;
         }
 
-        return sum;
+        return a;
 
+    }
+
+    public static int recursive_canWinNim(int a, int b) {
+        if (b == 0) return a;
+        int sum = a ^ b; //SUM of two integer is A XOR B
+        int carry = (a & b) << 1;  //CARRY of two integer is A AND B
+        return recursive_canWinNim(sum, carry);
     }
 }
