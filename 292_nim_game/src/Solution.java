@@ -1,3 +1,15 @@
+// url
+// game logic
+//
+//  n = stones on the heap
+//  can only remove between 1-3 stones per turn
+//  last person to remove all the stones wins
+//  so if there are 1,2,3,5,6,7,9 or divisibility of those, then you win
+//  else for 4,8 you loose
+//
+
+
+
 public class Solution
 {
     public static void main(String[] args)
